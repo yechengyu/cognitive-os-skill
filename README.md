@@ -23,13 +23,13 @@
 # 在你的项目根目录下
 mkdir -p .claude/skills/cognitive-os
 curl -o .claude/skills/cognitive-os/SKILL.md \
-  https://raw.githubusercontent.com/<your-org>/cognitive-os-skill/main/SKILL.md
+  https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/main/SKILL.md
 ```
 
 或者直接克隆：
 
 ```bash
-git clone https://github.com/<your-org>/cognitive-os-skill.git
+git clone https://github.com/yechengyu/cognitive-os-skill.git
 cp cognitive-os-skill/SKILL.md <your-project>/.claude/skills/cognitive-os/SKILL.md
 ```
 
