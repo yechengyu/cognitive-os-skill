@@ -1,6 +1,6 @@
 # 澄宇经营决策框架 (chengyu-perspective)
 
-> 基于实业经营实践蒸馏的认知操作系统，封装为 Claude Code Skill。
+> 基于实业经营实践蒸馏的认知操作系统，可安装到各种 AI IDE 中使用。
 
 ## 这是什么
 
@@ -14,7 +14,9 @@
 
 ## 安装
 
-将 `SKILL.md` 复制到你项目的 `.claude/skills/chengyu-perspective/` 目录下：
+核心文件就是 `SKILL.md`，根据你使用的 AI 工具选择对应方式：
+
+### Claude Code
 
 ```bash
 mkdir -p .claude/skills/chengyu-perspective
@@ -22,9 +24,44 @@ curl -o .claude/skills/chengyu-perspective/SKILL.md \
   https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/master/SKILL.md
 ```
 
+### Cursor
+
+```bash
+mkdir -p .cursor/rules
+curl -o .cursor/rules/chengyu-perspective.md \
+  https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/master/SKILL.md
+```
+
+### Windsurf
+
+```bash
+curl -o .windsurfrules \
+  https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/master/SKILL.md
+```
+
+或放入 `.windsurf/rules/` 目录：
+
+```bash
+mkdir -p .windsurf/rules
+curl -o .windsurf/rules/chengyu-perspective.md \
+  https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/master/SKILL.md
+```
+
+### Trae
+
+在 Trae 的项目规则（Project Rules）中新建一条规则，将 `SKILL.md` 的内容粘贴进去即可。
+
+### 其他 AI 工具
+
+直接下载 `SKILL.md`，将内容粘贴到你所用 AI 工具的自定义指令 / 系统提示词 / 项目规则中：
+
+```bash
+curl -O https://raw.githubusercontent.com/yechengyu/cognitive-os-skill/master/SKILL.md
+```
+
 ## 使用
 
-安装后，在 Claude Code 对话中说：
+安装后，在对话中说：
 
 - "用澄宇的角度给个意见"
 - "澄宇会怎么看这个方案"
@@ -33,7 +70,7 @@ curl -o .claude/skills/chengyu-perspective/SKILL.md \
 - "帮我用认知框架分析"
 - "挑战一下我的逻辑"
 
-Skill 激活后，AI 会根据具体问题挑选最相关的 2-3 个模型/启发式来分析，主动挑战你的逻辑漏洞。
+AI 会根据具体问题挑选最相关的 2-3 个模型/启发式来分析，主动挑战你的逻辑漏洞。
 
 ## License
 
